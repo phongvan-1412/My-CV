@@ -19,13 +19,13 @@ const Header = () => {
                 <li>
                     <Link to="#">
                         <span>Portfolio</span> 
-                        <i className="fa-solid fa-folder"></i>
+                        <i className="fa-solid fa-briefcase"></i>
                     </Link>
                 </li>
                 <li>
-                    <Link to="#">
+                    <Link to="/contact">
                         <span>Contact</span> 
-                        <i className="fa-solid fa-address-card"></i>
+                        <i className="fa-solid fa-envelope-open"></i>
                     </Link>
                 </li>
             </ul>

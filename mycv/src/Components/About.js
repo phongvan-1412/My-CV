@@ -133,6 +133,7 @@ class About extends Component{
                         </h1>
                         <span className="about-title-bg">Resume</span>
                     </div>
+                    
                     <section className="about-main-content">
                         <div className="container">
                             <div className="row">
@@ -205,6 +206,7 @@ class About extends Component{
                             </div>
 
                             <div className="row">
+
                                 <div className="col-12">
                                     <h3 className="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center ft-wt-600 about-custom-title">experience & education</h3>
                                 </div>
@@ -213,22 +215,22 @@ class About extends Component{
                                     <div className="row">
                                         {this.state.resumes.map((resume, index) => {
                                             return(
-                                            <div className="col-lg-6 m-15px-tb" key={index}>
-                                                <div className="about-resume-box">
-                                                    <ul>
-                                                        <li>
-                                                            <div className="icon">
-                                                                <i className="fa fa-briefcase"></i>
-                                                            </div>
-                                                            <span className="text-uppercase time">{resume.resumes_time}</span>
-                                                            <h5 className="poppins-font text-uppercase">{resume.resumes_doing}
-                                                                <span className="place">{resume.resumes_place}</span>
-                                                            </h5>
-                                                            <p>{resume.resumes_content}</p>
-                                                        </li>
-                                                    </ul>
+                                                <div className="col-lg-6 m-15px-tb" key={index}>
+                                                    <div className="about-resume-box">
+                                                        <ul>
+                                                            <li>
+                                                                <div className="icon">
+                                                                    <i className="fa fa-briefcase"></i>
+                                                                </div>
+                                                                <span className="text-uppercase time">{resume.resumes_time}</span>
+                                                                <h5 className="poppins-font text-uppercase">{resume.resumes_doing}
+                                                                    <span className="place">{resume.resumes_place}</span>
+                                                                </h5>
+                                                                <p>{resume.resumes_content}</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </div>
                                             )
                                         })}
                                     </div>
