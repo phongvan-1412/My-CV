@@ -466,3 +466,12 @@ header ul li:hover a span{
     overflow: hidden;
     transition: .3s;
 }
+
+
+/* ----------RESPONSIVE---------- */
+@media screen and (max-width: 1024px){
+    .contact-wrapper{
+        height: 150vh;
+    }
+}
+
