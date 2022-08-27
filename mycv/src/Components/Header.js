@@ -1,24 +1,32 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Header = () => {
     return(
         <header>
             <ul>
                 <li>
-                    <span>Home</span>   
-                    <i className='fa fa-home' data-content="Home"></i>
+                    <Link to="/">
+                        <span>Home</span>   
+                        <i className='fa fa-home' data-content="Home"></i>
+                    </Link>
                 </li>
                 <li>
-                    <span>About</span> 
-                    <i className="fa-solid fa-user"></i>
+                    <Link to="#">
+                        <span>About</span> 
+                        <i className="fa-solid fa-user"></i>
+                    </Link>
                 </li>
                 <li>
-                    <span>Portfolio</span> 
-                    <i className="fa-solid fa-folder"></i>
+                    <Link to="#">
+                        <span>Portfolio</span> 
+                        <i className="fa-solid fa-folder"></i>
+                    </Link>
                 </li>
                 <li>
-                    <span>Contact</span> 
-                    <i className="fa-solid fa-address-card"></i>
+                    <Link to="#">
+                        <span>Contact</span> 
+                        <i className="fa-solid fa-address-card"></i>
+                    </Link>
                 </li>
             </ul>
         </header>

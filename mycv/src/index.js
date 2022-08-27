@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Router, Routes, Route,Navigate } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
-
-// Header 
+import 'bootstrap/dist/css/bootstrap.min.css';
+ 
 import Header from './Components/Header';
-//Home
 import Home from './Components/Home';
-//Footer
-import Footer from './Components/Footer';
+import About from './Components/About';
+import Portfolio from './Components/Portfolio';
+import Contact from './Components/Contact';
+
 
 class HomePage extends Component{
   state={
@@ -21,9 +22,11 @@ class HomePage extends Component{
 
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/portfolio" element={<Portfolio />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
         </Routes>
 
-        <Footer />
       </div>
     )
   }
