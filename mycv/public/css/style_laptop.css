@@ -7,7 +7,11 @@
     --backgroundColor4: #fff;
     --backgroundColor5: #ffb400;
     --backgroundColor6: #111;
+    --backgroundColor7: #777;
+    --borderColor: #252525;
     --fontColor: #fff;
+    --titleBgColor: hsla(0,0%,100%,.07);
+    --separatorColor: #252525;
 }
 *, ::after, ::before{
     box-sizing: border-box;
@@ -235,4 +239,187 @@ header ul li:hover a span{
     transform-origin: right;
     background-color: var(--backgroundColor5);
     transition: var(--backgroundColor5) 450s ease-in-out;
+}
+
+/* ----------ABOUT---------- */
+.about-wrapper{
+    width: 100%;
+    height: 200%;
+    background: var(--backgroundColor6);
+    z-index: 1;
+}
+.about-title-section{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+.about-title-section h1{
+    margin: 0;
+    color: var(--fontColor);
+    font-size: 56px;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+}
+.about-title-section h1 span{
+    color: var(--backgroundColor5);
+}
+.about-title-bg{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    line-height: .7;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: var(--titleBgColor);
+    font-size: 110px;
+    font-weight: 800;
+    transform: translateY(-50%);
+}
+.about-custom-title{
+    padding-bottom: 22px;
+    color: var(--fontColor);
+    font-size: 26px;
+}
+.about-list{
+    display: flex;
+    flex-wrap: wrap ;
+}
+.about-list li:not(:last-child), .about-main-content{
+    padding-bottom: 20px;
+}
+.about-list li{
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+.about-list-title{
+    text-transform: capitalize;
+    color: var(--fontColor);
+    opacity: .8;
+}
+.about-list-value{
+    color: var(--fontColor);
+    font-weight: 600;
+}
+.about-box-stats .with-margin, 
+.about-box-skills .with-margin{
+    margin-bottom: 30px;
+}
+.about-box-stats,
+.about-box-skills{
+    padding: 20px 30px 25px 40px;
+    border: 1px solid var(--borderColor);
+    border-radius: 5px;
+    color: var(--fontColor);
+}
+.about-box-stats h3,
+.about-box-skills h3{
+    display: inline-block;
+    margin: 0;
+    color: var(--backgroundColor5);
+    font-size: 50px;
+    font-weight: 700;
+}
+.about-box-stats h3::after{
+    position: absolute;
+    top: 2px;
+    right: -24px;
+    content: "+";
+    font-size: 33px;
+    font-weight: 300;
+}
+.about-box-skills h3::after{
+    position: absolute;
+    top: 2px;
+    right: -24px;
+    content: "%";
+    font-size: 33px;
+    font-weight: 300;
+}
+.about-box-stats p::before,
+.about-box-skills p::before{
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    top: 13px;
+    left: 0;
+    content: "";
+    background: var(--backgroundColor7);
+}
+.about-box-stats p,
+.about-box-skills p{
+    padding-left: 45px;
+}
+.separator{
+    max-width: 40%;
+    margin: 50px auto 55px;
+    border-top: 1px solid var(--separatorColor);
+}
+.about-resume-box ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.about-resume-box li{
+    position: relative;
+    margin: 0 0 50px;
+    padding: 0 20px 0 60px;
+}
+.about-resume-box li:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    border-left: 1px solid #333;
+    content: "";
+}
+.about-resume-box .icon{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--fontColor);
+    background-color: var(--backgroundColor5);
+    z-index: 1;
+}
+.about-resume-box .time{
+    display: inline-block;
+    padding: 1px 10px;
+    border-radius: 20px;
+    background-color: var(--borderColor);
+    color: var(--fontColor);
+    font-size: 12px;
+    opacity: .8;
+}
+.about-resume-box h5{
+    margin: 7px 0px 10px;
+    color: var(--fontColor);
+    font-size: 18px;
+}
+.about-resume-box .place::before{
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    top: 9px;
+    left: 7px;
+    background-color: var(--fontColor);
+    content: "";
+    opacity: .8;
+}
+.about-resume-box .place{
+    position: relative;
+    padding-left: 26px;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: .8;
+}
+.about-resume-box p{
+    margin: 0;
+    color: #eee;
+    font-size: 14px;
 }

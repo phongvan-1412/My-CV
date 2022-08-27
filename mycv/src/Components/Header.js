@@ -7,11 +7,11 @@ const Header = () => {
                 <li>
                     <Link to="/">
                         <span>Home</span>   
-                        <i className='fa fa-home' data-content="Home"></i>
+                        <i className='fa fa-home'></i>
                     </Link>
                 </li>
                 <li>
-                    <Link to="#">
+                    <Link to="/about">
                         <span>About</span> 
                         <i className="fa-solid fa-user"></i>
                     </Link>
