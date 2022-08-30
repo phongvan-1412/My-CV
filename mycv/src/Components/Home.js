@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+
+import About from "./About";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
 AOS.refresh();
+
 
 const Home = () => {
     const [show, setShow] = useState(false);
@@ -51,15 +55,9 @@ const Home = () => {
                             size="xl"
                             data-aos="fade-up"
                             data-aos-duration="1200"
-                            className="quickview-wrapper">
-                                <Modal.Header closeButton>
-                                    <Modal.Title id="example-custom-modal-styling-title" className="product-quickview-title">
-                                        
-                                    </Modal.Title>
-                                </Modal.Header>
-
-                                <Modal.Body>
-                                    <h1>Hello</h1>
+                            style={{backgroundColor: "transparent"}}>
+                                <Modal.Body style={{backgroundColor: "#111"}}>
+                                    <About />
                                 </Modal.Body>
                             </Modal>
                         </div>
