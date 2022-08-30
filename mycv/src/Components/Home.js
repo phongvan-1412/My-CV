@@ -38,17 +38,19 @@ const Home = () => {
                                 around me.
                             </p>
 
-                            <button className="button" onClick={handleShow}>
+                            <Button className="button" onClick={handleShow}>
                                 <span className="button-text">more about me</span>
                                 <span className="button-icon fa fa-arrow-right"></span>
-                            </button>
+                            </Button>
 
-                            {/* <Modal
+                            <Modal
                             show={show} 
                             onHide={handleClose}
                             dialogClassName="modal-90w"
                             aria-labelledby="example-custom-modal-styling-title"
                             size="xl"
+                            data-aos="fade-up"
+                            data-aos-duration="1200"
                             className="quickview-wrapper">
                                 <Modal.Header closeButton>
                                     <Modal.Title id="example-custom-modal-styling-title" className="product-quickview-title">
@@ -59,7 +61,7 @@ const Home = () => {
                                 <Modal.Body>
                                     <h1>Hello</h1>
                                 </Modal.Body>
-                            </Modal> */}
+                            </Modal>
                         </div>
                     </div>
                 </div>
