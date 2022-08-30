@@ -470,5 +470,51 @@ header ul li:hover a span{
     .contact-wrapper{
         height: 150vh;
     }
+    .button::before, .button{
+        margin-left: 50px;
+    }
+    .button-icon{
+        right: 45%;
+    }
 }
-
+@media screen and (max-width: 950px){
+    .button::before, .button{
+        margin-left: 100px;
+    }
+    .button-icon{
+        right: 35%;
+    }
+}
+@media screen and (max-width: 560px){
+    .button::before, .button{
+        margin-left: 150px;
+    }
+    .button-icon{
+        right: 24%;
+    }
+}
+@media screen and (max-width: 540px){
+    .button-icon{
+        right: 22%;
+    }
+}
+@media screen and (max-width: 530px){
+    .button-icon{
+        right: 20%;
+    }
+}
+@media screen and (max-width: 520px){
+    .button-icon{
+        right: 19%;
+    }
+}
+@media screen and (max-width: 510px){
+    .button-icon{
+        right: 17%;
+    }
+}
+@media screen and (max-width: 500px){
+    .button-icon{
+        right: 15%;
+    }
+}
