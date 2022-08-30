@@ -215,7 +215,6 @@ header ul li:hover a span{
     color: var(--fontColor);
 }
 
-
 /* ----------ABOUT---------- */
 .about-wrapper{
     width: 100%;
@@ -407,7 +406,7 @@ header ul li:hover a span{
 /* ----------CONTACT---------- */
 .contact-wrapper{
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     margin: 0 auto;
     background: var(--backgroundColor6);
     z-index: 1;
@@ -463,12 +462,75 @@ header ul li:hover a span{
     overflow: hidden;
     transition: .3s;
 }
-
+.button-contact::before{
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-image: linear-gradient(90deg, #0a58ca,var(--backgroundColor5));
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 350ms ease-in-out;
+    z-index: -1 !important;
+}
+.button-contact{
+    position: relative;
+    display: inline-block;
+    padding: 16px 70px 16px 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 35px;
+    border: 1px solid var(--backgroundColor5);
+    background-color: transparent;
+    color: var(--fontColor);
+    line-height: 1.4;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all .25s ease-in-out;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    z-index: 1  !important;
+}
+.button-contact .button-contact-text{
+    position: relative;
+    color: var(--fontColor);
+    z-index: 2;
+}
+.button-contact-icon{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    bottom: 0;
+    top: -1px;
+    right: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--backgroundColor5);
+    color: var(--fontColor);
+}
+.button-contact:hover::before,
+.button-contact:focus::before{
+    transform: scaleX(1);
+}
+.button-contact:hover,
+.button-contact:focus{
+    color: white;
+}
 
 /* ----------RESPONSIVE---------- */
 @media screen and (max-width: 1024px){
     .contact-wrapper{
-        height: 150vh;
+        height: 170vh;
     }
     .button::before, .button{
         margin-left: 50px;
