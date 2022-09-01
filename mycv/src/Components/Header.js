@@ -17,7 +17,7 @@ const Header = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="#">
+                    <Link to="/portfolio">
                         <span>Portfolio</span> 
                         <i className="fa-solid fa-briefcase"></i>
                     </Link>

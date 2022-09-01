@@ -36,7 +36,7 @@ class Contact extends Component {
                         <span className="contact-title-bg">Contact</span>
                     </div>
     
-                    <div className="container contact-main-content">
+                    <div className="container contact-main-content ">
                         <div className="row">
                             <div className="col-12 col-lg-4">
                                 <h3 className="text-uppercase mb-0 ft-wt-600 pb-3 contact-custom-title">Don't be shy!</h3>
@@ -66,6 +66,7 @@ class Contact extends Component {
                                                        required/>
                                             </div>
                                         </div>
+                                        
                                         <div className="col-12 col-md-6">
                                             <div className="form-group">
                                                 <input type="email" 
@@ -74,6 +75,7 @@ class Contact extends Component {
                                                     required/>
                                             </div>
                                         </div>
+
                                         <div className="col-12 col-md-12">
                                             <div className="form-group">
                                                 <input type="text" 
@@ -82,6 +84,7 @@ class Contact extends Component {
                                                     required/>
                                             </div>
                                         </div>
+
                                         <div className="col-12">
                                             <div className="form-group">
                                                 <textarea
@@ -91,6 +94,7 @@ class Contact extends Component {
                                                 </textarea>
                                             </div>
                                         </div>
+                                        
                                         <div className="col-12">
                                             <button type="submit" className="button-contact">
                                                 <span className="button-contact-text">Send Message</span>

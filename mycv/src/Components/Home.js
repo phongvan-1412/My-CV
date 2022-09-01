@@ -16,7 +16,7 @@ const Home = () => {
 
     const handleShow = (e) => {
         setShow(true);
-      }
+    }
 
     return(
         <div className="container-fluid mainhome-wrapper" 

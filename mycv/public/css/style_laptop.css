@@ -8,6 +8,7 @@
     --backgroundColor7: #777;
     --borderColor: #252525;
     --fontColor: #fff;
+    --linkColor: #0a58ca;
     --titleBgColor: hsla(0,0%,100%,.07);
     --separatorColor: #252525;
 }
@@ -85,7 +86,8 @@ header ul li a span{
     font-size: 15px;
     font-weight: bold;
     letter-spacing: 1px;
-    transition: 350ms ease-in-out;
+    transform: translateX(50px);
+    transition: .5s;
     opacity: 0;
 }
 header ul li:hover a i{
@@ -94,7 +96,8 @@ header ul li:hover a i{
 }
 header ul li:hover a span{
     opacity: 1;
-    transition: 350ms ease-in-out;
+    transform: translateX(0px);
+    transition: .5s;
 }
 
 /* ----------HOME---------- */
@@ -223,14 +226,16 @@ header ul li:hover a span{
     z-index: 1;
 }
 .about-title-section,
-.contact-title-section{
+.contact-title-section,
+.portfolio-title-section{
     position: relative;
     width: 100%;
     margin: 0 auto;
     padding: 80px 0;
 }
 .about-title-section h1,
-.contact-title-section h1{
+.contact-title-section h1,
+.portfolio-title-section h1{
     margin: 0;
     color: var(--fontColor);
     font-size: 56px;
@@ -238,11 +243,13 @@ header ul li:hover a span{
     text-transform: uppercase;
 }
 .about-title-section h1 span,
-.contact-title-section h1 span{
+.contact-title-section h1 span,
+.portfolio-title-section h1 span{
     color: var(--backgroundColor5);
 }
 .about-title-bg,
-.contact-title-bg{
+.contact-title-bg,
+.portfolio-title-bg{
     position: absolute;
     top: 50%;
     right: 0;
@@ -261,23 +268,29 @@ header ul li:hover a span{
     color: var(--fontColor);
     font-size: 26px;
 }
-.about-list{
+.about-list,
+.portfolio-detail-list{
     display: flex;
     flex-wrap: wrap ;
 }
-.about-list li:not(:last-child), .about-main-content{
+.about-list li:not(:last-child), 
+.about-main-content
+.portfolio-detail-list li:not(:last-child){
     padding-bottom: 20px;
 }
-.about-list li{
+.about-list li,
+.portfolio-detail-list li{
     max-width: 50%;
     flex: 0 0 50%;
 }
-.about-list-title{
+.about-list-title,
+.portfolio-detail-title{
     text-transform: capitalize;
     color: var(--fontColor);
     opacity: .8;
 }
-.about-list-value{
+.about-list-value,
+.portfolio-detail-value{
     color: var(--fontColor);
     font-weight: 600;
 }
@@ -471,7 +484,7 @@ header ul li:hover a span{
     content: "";
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    background-image: linear-gradient(90deg, #0a58ca,var(--backgroundColor5));
+    background-image: linear-gradient(90deg, var(--linkColor),var(--backgroundColor5));
     transform-origin: right;
     transform: scaleX(0);
     transition: transform 350ms ease-in-out;
@@ -527,6 +540,93 @@ header ul li:hover a span{
     color: white;
 }
 
+/* ----------PORTFOLIO---------- */
+.portfolio-wrapper{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background: var(--backgroundColor6);
+    z-index: 1;
+}
+.portfolio-tab-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+.portfolio-tab-list a li, 
+.portfolio-tab-list a li:hover{
+    color: var(--backgroundColor5);
+}
+
+.portfolio-tab-list a li{
+    margin: 0 15px 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.portfolio-tab-list .nav-link.active li{
+    color: var(--backgroundColor5);
+}
+.portfolio-tab-list .nav-link li{
+    color: var(--fontColor);
+}
+.tab-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    gap: 30px;
+    padding-bottom: 70px;
+}
+#tab-content{
+    position: relative;
+    width: 100%;
+    height: 229px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    outline: none !important;
+}
+#tab-content img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: .5rem;
+}
+#tab-content span{
+    position: relative;
+    color: var(--fontColor);
+    font-weight: 700;
+    transform: translateY(50px);
+    visibility: hidden;
+    opacity: 0;
+}
+#tab-content:hover{
+    background-color: var(--backgroundColor5) !important;
+}
+#tab-content:hover img{
+    display: none;
+} 
+#tab-content:hover span{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: .5s;
+}
+.portfolio-heading{
+    margin: 0;
+    padding: 10px 0 20px;
+    text-align: center;
+    color: var(--backgroundColor5) !important;
+    font-size: 33px;
+    font-weight: 700;
+}
+.portfolio-detail-title{
+    padding-left: 50px;
+}
 /* ----------RESPONSIVE---------- */
 @media screen and (max-width: 1024px){
     .contact-wrapper{
