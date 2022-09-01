@@ -28,6 +28,7 @@ const Portfolio = () => {
             project_description_title: "Description",
             project_description_value: "",
             project_video_link: "https://www.youtube.com/embed/FOOEn4aIbM8",
+            project_img: "'../img/image1.jpg'",
             index: 2,
             id: 1
         },
@@ -47,6 +48,7 @@ const Portfolio = () => {
             project_description_title: "Description",
             project_description_value: "",
             project_video_link: "https://www.youtube.com/embed/JYM16JwFCSU",
+            project_img: "'../img/image2.jpg'",
             index: 2,
             id: 2
         }
@@ -120,15 +122,16 @@ const Portfolio = () => {
                 <div className="container">
                     <div className="tab-container">
                         {horizontalState === 1 ?
-                            <>{projectDetail.map(test => {
+                            <>{projectDetail.map((test, indexmap) => {
                                 return (
                                     <Button 
+                                    key={indexmap}
                                     id="tab-content" 
                                     role="tabpanel"
                                     name={test.id}
                                     onClick={handleShow}
                                     >
-                                        <img   style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '../img/image1.jpg'})` }} />
+                                        <img   style={{ backgroundImage: `url(${process.env.PUBLIC_URL + test.project_img})` }} />
                                         <span className="text-uppercase"
                                               name={test.id}
                                               onClick={handleShow}>
@@ -139,16 +142,17 @@ const Portfolio = () => {
                             })}</> : null}
 
                         {horizontalState === 2 ?
-                            <>{projectDetail.map(test => {
+                            <>{projectDetail.map((test, indexmap) => {
                                 if (test.index === 2) {
                                     return (
                                         <Button 
+                                        key={indexmap}
                                         id="tab-content" 
                                         role="tabpanel"
                                         name={test.id}
                                         onClick={handleShow}
                                         >
-                                            <img  style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '../img/image1.jpg'})` }} />
+                                            <img  style={{ backgroundImage: `url(${process.env.PUBLIC_URL + test.project_img}})` }} />
                                             <span className="text-uppercase"
                                                   name={test.id}
                                                   onClick={handleShow}>
@@ -160,16 +164,17 @@ const Portfolio = () => {
                             })}</> : null}
 
                         {horizontalState === 3 ?
-                            <>{projectDetail.map(test => {
+                            <>{projectDetail.map((test, indexmap) => {
                                 if (test.index === 3) {
                                     return (
                                         <Button 
+                                        key={indexmap}
                                         id="tab-content" 
                                         role="tabpanel"
                                         name={test.id}
                                         onClick={handleShow}
                                         >
-                                            <img   style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '../img/image1.jpg'})` }} />
+                                            <img   style={{ backgroundImage: `url(${process.env.PUBLIC_URL + test.project_img}})` }} />
                                             <span className="text-uppercase"
                                                   name={test.id}
                                                   onClick={handleShow}>
