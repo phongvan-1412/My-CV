@@ -50,7 +50,7 @@ class About extends Component{
         ],
         stats: [
             {
-                stats_number: "1",
+                stats_number: "0",
                 stats_content: "year of",
                 stats_block: "experience"
                 
@@ -79,46 +79,40 @@ class About extends Component{
                 skills_name: "LARAVEL" 
             },
             {
-                skill_percent: "45",
+                skill_percent: "55",
                 skills_name: "REACT" 
             },
         ],
         resumes: [
             {
-                resumes_time: "2021-PRESENT",
-                resumes_doing: "Web Developer",
+                resumes_time: "08/2021-PRESENT",
+                resumes_doing: "Student",
                 resumes_place: "Aptech",
-                resumes_content: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit"
+                resumes_content: "I've just finished semesterI about Web Application at Aptech and now, I'm learning semesterII. "
             },
             {
-                resumes_time: "2021-PRESENT",
-                resumes_doing: "Web Developer",
-                resumes_place: "Aptech",
-                resumes_content: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit"
+                resumes_time: "2017-2020",
+                resumes_doing: "Store Manager",
+                resumes_place: "JULY retail clothes shop",
+                resumes_content: "After quit school, I've worked at a retail clothes shop to find out more about myself."
             },
             {
-                resumes_time: "2021-PRESENT",
-                resumes_doing: "Web Developer",
-                resumes_place: "Aptech",
-                resumes_content: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit"
+                resumes_time: "03/2020-04/2021",
+                resumes_doing: "Retail Employee",
+                resumes_place: "Classic Fine Foods",
+                resumes_content: "I do this job to save money to go to learn at Aptech."
             },
             {
-                resumes_time: "2021-PRESENT",
-                resumes_doing: "Web Developer",
-                resumes_place: "Aptech",
-                resumes_content: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit"
+                resumes_time: "2014-2017",
+                resumes_doing: "Industrial Design",
+                resumes_place: "Ton Duc Thang University",
+                resumes_content: "I've learned about Design for 2.5 years but when I experienced at school, I realized I didn't fit in this major, so I decided to drop school and go to work."
             },
             {
-                resumes_time: "2021-PRESENT",
-                resumes_doing: "Web Developer",
-                resumes_place: "Aptech",
-                resumes_content: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit"
-            },
-            {
-                resumes_time: "2021-PRESENT",
-                resumes_doing: "Web Developer",
-                resumes_place: "Aptech",
-                resumes_content: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit"
+                resumes_time: "08/2020-02/2021",
+                resumes_doing: "Digital Marketing",
+                resumes_place: "FPT Polytechnic",
+                resumes_content: "I've learned semesterI here and suddenly, this leads me to what I'm doing right now: 'Learning to become a Full Stack Developer' "
             }
         ]
     }
