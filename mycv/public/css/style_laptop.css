@@ -40,6 +40,7 @@ body{
 
 /* ----------HEADER---------- */
 #header1{
+    height: 0;
     visibility: hidden;
 }
 header{
