@@ -13,6 +13,7 @@ const Header = () => {
                     </li>
                     <li>
                         <Link to="/about"> 
+                            <span>About</span>   
                             <i className="fa-solid fa-user"></i>
                         </Link>
                     </li>
