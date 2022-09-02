@@ -39,6 +39,9 @@ body{
 }
 
 /* ----------HEADER---------- */
+#header1{
+    visibility: hidden;
+}
 header{
     position: fixed;
     right: 25px;
@@ -645,6 +648,50 @@ header ul li:hover a span{
     }
     .button-icon{
         right: 35%;
+    }
+}
+@media screen and (max-width: 768px){
+    header{
+        display:none;
+    }
+    #header1{
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        display: block;
+        background-color: rgba(0,0,0,0.25);
+        visibility: visible;
+        z-index: 5;
+    }
+    #header1 ul{
+        height: 100px;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #header1 ul li a i{
+        position: relative;
+        right: 0px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        background-color: var(--backgroundColor2);
+        border-radius: 30px;
+        color: var(--fontColor);
+    }
+    #header1 ul li a i::before{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #header1 ul li:hover a i{
+        background-color: var(--backgroundColor5);
+        color: var(--fontColor);
     }
 }
 @media screen and (max-width: 560px){
