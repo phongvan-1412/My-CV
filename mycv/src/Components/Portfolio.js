@@ -130,13 +130,10 @@ const Portfolio = () => {
                                     role="tabpanel"
                                     name={test.id}
                                     onClick={handleShow}
+                                    data-content={test.project_name_value}
                                     >
                                         <img   style={{ backgroundImage: `url(${process.env.PUBLIC_URL + test.project_img})` }} />
-                                        <span className="text-uppercase"
-                                              name={test.id}
-                                              onClick={handleShow}>
-                                            {test.project_name_value}
-                                        </span>
+                                        {test.project_name_value}
                                     </Button>
                                 )
                             })}</> : null}
@@ -151,15 +148,12 @@ const Portfolio = () => {
                                         role="tabpanel"
                                         name={test.id}
                                         onClick={handleShow}
+                                        data-content={test.project_name_value}
                                         >
-                                            <img  style={{ backgroundImage: `url(${process.env.PUBLIC_URL + test.project_img}})` }} />
-                                            <span className="text-uppercase"
-                                                  name={test.id}
-                                                  onClick={handleShow}>
-                                                    {test.project_name_value}
-                                            </span>
+                                            <img   style={{ backgroundImage: `url(${process.env.PUBLIC_URL + test.project_img})` }} />
+                                            {test.project_name_value}
                                         </Button>
-                                    )
+                                        )
                                 }
                             })}</> : null}
 
@@ -173,13 +167,10 @@ const Portfolio = () => {
                                         role="tabpanel"
                                         name={test.id}
                                         onClick={handleShow}
+                                        data-content={test.project_name_value}
                                         >
-                                            <img   style={{ backgroundImage: `url(${process.env.PUBLIC_URL + test.project_img}})` }} />
-                                            <span className="text-uppercase"
-                                                  name={test.id}
-                                                  onClick={handleShow}>
-                                                    {test.project_name_value}
-                                            </span>
+                                            <img   style={{ backgroundImage: `url(${process.env.PUBLIC_URL + test.project_img})` }} />
+                                            {test.project_name_value}
                                         </Button>
                                     )
                                 }
