@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
+import emailjs from 'emailjs-com';
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -25,6 +27,17 @@ class Contact extends Component {
         ]
     }
     render(){
+        const sendEmail = (e) => {
+            e.preventDefault();
+        
+            emailjs.sendForm('phongvan_1412', 'template_2qfy44l', e.target, 'e-1E9vepB3la1PGys')
+              .then((result) => {
+                  console.log(result.text);
+              }, (error) => {
+                  console.log(error.text);
+              });
+              e.target.reset();
+          };
         return(
             <div className="container-fluid contact-wrapper" 
                  data-aos="fade-up"
@@ -56,7 +69,7 @@ class Contact extends Component {
                             </div>
                             
                             <div className="col-12 col-lg-8">
-                                <form id="myForm" className="contact-form">
+                                <form id="myForm" className="contact-form" onSubmit={sendEmail}>
                                     <div className="row">
                                         <div className="col-12 col-md-6">
                                             <div className="form-group">
@@ -70,9 +83,9 @@ class Contact extends Component {
                                         <div className="col-12 col-md-6">
                                             <div className="form-group">
                                                 <input type="email" 
-                                                    name="user_email"
-                                                    placeholder="YOUR EMAIL"
-                                                    required/>
+                                                       name="email"
+                                                       placeholder="YOUR EMAIL"
+                                                       required/>
                                             </div>
                                         </div>
 
