@@ -119,7 +119,9 @@ const Portfolio = () => {
 
                     <a href={MyCV} download
                        className="nav-link active show">
-                        <li>DOWNLOAD</li>
+                        <li>DOWNLOAD 
+                            <i className="fa-solid fa-download download-icon"></i>
+                        </li>
                     </a>
 
                 </ul>

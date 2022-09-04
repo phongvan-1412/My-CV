@@ -155,7 +155,9 @@ class About extends Component{
                                             </ul>
                                             
                                         <hr />
-                                        <a href={MyCV} download className="download-link">DOWNLOAD</a>
+                                        <a href={MyCV} download className="download-link">DOWNLOAD 
+                                                <i className="fa-solid fa-download download-icon"></i>
+                                        </a>
 
                                         </div>
     

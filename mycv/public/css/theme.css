@@ -84,6 +84,9 @@ body{
     font-weight: 600;
     text-transform: uppercase;
 }
+.download-icon{
+    padding-left: 5px;
+}
 /* ----------HEADER---------- */
 #header1{
     height: 0;
