@@ -9,10 +9,8 @@
     <script src="https://kit.fontawesome.com/8b058784b8.js"crossorigin="anonymous"></script>
     
      <!-- CSS  -->
-    <link rel="stylesheet" href="%PUBLIC_URL%/css/style_mobile.css" />
-    <link rel="stylesheet" href="%PUBLIC_URL%/css/style_tablet.css" />
-    <link rel="stylesheet" href="%PUBLIC_URL%/css/style_laptop.css" />
-    <title>My Curriculum Vitae</title>
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/theme.css" />
+    <title>My Portfolio</title>
 
   </head>
 
@@ -24,36 +22,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     
     <div id="root"></div>
+    <div id="cursor"></div>
+    <div id="circle"></div>
 
-    <!-- Back to top Button   -->
-    <!-- <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
+    <!-- Style Cursor   -->
     <script>
-      let mybutton = document.getElementById("btn-back-to-top");
-          
-          window.onscroll = function () {
-            scrollFunction();
-          };
-          
-          function scrollFunction() {
-            if (
-              document.body.scrollTop > 20 ||
-              document.documentElement.scrollTop > 20
-            ) {
-              mybutton.style.display = "block";
-            } else {
-              mybutton.style.display = "none";
-            }
-          }
-          mybutton.addEventListener("click", backToTop);
-          
-          function backToTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-          }
-      </script> -->
+      var a_link = document.querySelectorAll(".a-link");
+  
+      a_link.forEach(e => e.addEventListener('mouseenter', handleMouseEnter));
+      a_link.forEach(e => e.addEventListener('mouseleave', handleMouseLeave));
+      window.addEventListener('mousemove', handleMouseMove);
+      
+      function handleMouseMove(event) {
+        var cursor_top = event.pageY - (cursor.clientHeight / 2);
+        var cursor_left = event.pageX - (cursor.clientWidth / 2);
+        var circle_top = event.pageY - (circle.clientHeight / 2);
+        var circle_left = event.pageX - (circle.clientWidth / 2);
+        cursor.style.top = cursor_top + 2 + 'px';
+        cursor.style.left = cursor_left + 2 + 'px';
+        circle.style.top = circle_top + 'px';
+        circle.style.left = circle_left + 'px';
+      }
+      
+      function handleMouseEnter() {
+        cursor.classList.add('hovered');
+        circle.classList.add('hovered');
+      }
+      
+      function handleMouseLeave() {
+        cursor.classList.remove('hovered');
+        circle.classList.remove('hovered');
+      }
+    </script> 
   </body>
   
 </html>

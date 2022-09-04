@@ -1,6 +1,8 @@
 import React, { Component, useRef } from 'react';
 import emailjs from 'emailjs-com';
 
+import MyCV from "../data/MyCV.pdf";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -46,7 +48,7 @@ class Contact extends Component {
                         <h1>get in
                             <span> touch</span>
                         </h1>
-                        <span className="contact-title-bg">Contact</span>
+                        <span className="contact-title-bg text-left text-sm-center">Contact</span>
                     </div>
     
                     <div className="container contact-main-content ">
@@ -66,6 +68,9 @@ class Contact extends Component {
                                         </p>
                                     )
                                 })}
+                            <hr />
+                            
+                            <a href={MyCV} download className="download-link">DOWNLOAD</a>
                             </div>
                             
                             <div className="col-12 col-lg-8">

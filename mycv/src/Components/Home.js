@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 import About from "./About";
+import MyCV from "../data/MyCV.pdf";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -32,7 +33,7 @@ const Home = () => {
                     <div className="col-12 col-lg-8 offset-lg-4 text-center text-lg-start home-shorcut-wrapper">
                         <div>
                             <h1 className="text-uppercase poppins-font"> I'm Pham Van.
-                                <span>web designer</span>
+                                <span>full-stack web developer</span>
                             </h1>
 
                             <p>
@@ -46,6 +47,10 @@ const Home = () => {
                                 <span className="button-text">more about me</span>
                                 <span className="button-icon fa fa-arrow-right"></span>
                             </Button>
+
+                            <hr />
+                            
+                            <a href={MyCV} download className="download-link">DOWNLOAD</a>
 
                             <Modal
                             show={show} 

@@ -5,6 +5,7 @@ import ScrollToTop from "./ScrollToTop";
 import 'bootstrap/dist/css/bootstrap.min.css';
  
 import Header from './Components/Header';
+import Footer from './Components/Footer';
 import Home from './Components/Home';
 import About from './Components/About';
 import Portfolio from './Components/Portfolio';
@@ -27,6 +28,7 @@ class HomePage extends Component{
           <Route path="/contact" element={<Contact />}></Route>
         </Routes>
 
+        <Footer />
       </div>
     )
   }

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import MyCV from "../data/MyCV.pdf";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -125,7 +128,7 @@ class About extends Component{
                         <h1>about
                             <span> me</span>
                         </h1>
-                        <span className="about-title-bg">Resume</span>
+                        <span className="about-title-bg text-left text-sm-center">Resume</span>
                     </div>
                     
                     <section className="about-main-content">
@@ -150,6 +153,10 @@ class About extends Component{
                                                     ) 
                                                 })}                                               
                                             </ul>
+                                            
+                                        <hr />
+                                        <a href={MyCV} download className="download-link">DOWNLOAD</a>
+
                                         </div>
     
                                     </div>

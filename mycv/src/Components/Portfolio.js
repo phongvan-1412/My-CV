@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 import ProjectDetail from './ProjectDetail';
-
+import MyCV from '../data/MyCV.pdf'
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -22,11 +22,11 @@ const Portfolio = () => {
             project_position_title: "Position",
             project_position_value: "Full Stack",
             project_work_title: "Works",
-            project_work_value: "",
+            project_work_value: "Product: Display + Relevant Functional",
             project_source_title: "Source Code",
-            project_source_value: "",
+            project_source_value: "https://github.com/phongvan-1412/VNHP-Online-Auction",
             project_description_title: "Description",
-            project_description_value: "",
+            project_description_value: "Our Project modeled a simple online ancient auction system with a friendly layout for user which has an easy way to access product.",
             project_video_link: "https://www.youtube.com/embed/FOOEn4aIbM8",
             project_img: "'../img/image1.jpg'",
             index: 2,
@@ -42,11 +42,11 @@ const Portfolio = () => {
             project_position_title: "Position",
             project_position_value: "Full Stack",
             project_work_title: "Works",
-            project_work_value: "",
+            project_work_value: "Product: Display + Relevant Functional",
             project_source_title: "Source Code",
-            project_source_value: "",
+            project_source_value: "https://gitlab.com/vnhp-group/fitness-lifestyle-tech-wiz",
             project_description_title: "Description",
-            project_description_value: "",
+            project_description_value: "The main purpose of this project is building a personal health care service website, where customer can make online booking appointments with doctors, buy health package services and proceed payment online.",
             project_video_link: "https://www.youtube.com/embed/JYM16JwFCSU",
             project_img: "'../img/image2.jpg'",
             index: 2,
@@ -80,7 +80,7 @@ const Portfolio = () => {
                 <h1>my
                     <span> portfolio</span>
                 </h1>
-                <span className="portfolio-title-bg">Works</span>
+                <span className="portfolio-title-bg text-left text-sm-center">Works</span>
             </div>
 
             <div className="portfolio-main-content">
@@ -116,6 +116,11 @@ const Portfolio = () => {
                         aria-selected="false">
                         <li>PERSONAL</li>
                     </Link>
+
+                    <a href={MyCV} download
+                       className="nav-link active show">
+                        <li>DOWNLOAD</li>
+                    </a>
 
                 </ul>
 
