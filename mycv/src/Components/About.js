@@ -94,16 +94,22 @@ class About extends Component{
                 resumes_content: "I've just finished semesterI about Web Application at Aptech and now, I'm learning semesterII. "
             },
             {
-                resumes_time: "2017-2020",
-                resumes_doing: "Store Manager",
-                resumes_place: "JULY retail clothes shop",
-                resumes_content: "After quit school, I've worked at a retail clothes shop to find out more about myself."
-            },
-            {
                 resumes_time: "03/2020-04/2021",
                 resumes_doing: "Retail Employee",
                 resumes_place: "Classic Fine Foods",
                 resumes_content: "I do this job to save money to go to learn at Aptech."
+            },
+            {
+                resumes_time: "08/2020-02/2021",
+                resumes_doing: "Digital Marketing",
+                resumes_place: "FPT Polytechnic",
+                resumes_content: "I've learned semesterI here and suddenly, this leads me to what I'm doing right now: 'Learning to become a Full Stack Developer' "
+            },
+            {
+                resumes_time: "2017-2020",
+                resumes_doing: "Store Manager",
+                resumes_place: "JULY retail clothes shop",
+                resumes_content: "After quit school, I've worked at a retail clothes shop to find out more about myself."
             },
             {
                 resumes_time: "2014-2017",
@@ -111,12 +117,7 @@ class About extends Component{
                 resumes_place: "Ton Duc Thang University",
                 resumes_content: "I've learned about Design for 2.5 years but when I experienced at school, I realized I didn't fit in this major, so I decided to drop school and go to work."
             },
-            {
-                resumes_time: "08/2020-02/2021",
-                resumes_doing: "Digital Marketing",
-                resumes_place: "FPT Polytechnic",
-                resumes_content: "I've learned semesterI here and suddenly, this leads me to what I'm doing right now: 'Learning to become a Full Stack Developer' "
-            }
+            
         ]
     }
     render(){
