@@ -37,7 +37,7 @@ const Home = () => {
                             </h1>
 
                             <p>
-                                I'm a Vietnamese based web designer & front‑end developer focused on
+                                I'm a Vietnamese based Web Designer & Full-Stack Developer focused on
                                 crafting clean & user‑friendly experiences, I am passionate about
                                 building excellent software that improves the lives of those
                                 around me.

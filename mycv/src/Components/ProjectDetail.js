@@ -9,7 +9,7 @@ AOS.refresh();
 const project = ({ project }) => {
     return(
         <div className="row">
-                <div className="col-12 ">
+            <div className="col-12 ">
                 <h2 className="text-uppercase text-center portfolio-heading">mockup project</h2>
             </div>
 

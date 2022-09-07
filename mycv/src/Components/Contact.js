@@ -68,11 +68,13 @@ class Contact extends Component {
                                         </p>
                                     )
                                 })}
-                            <hr />
-                            
-                            <a href={MyCV} download className="download-link">DOWNLOAD 
-                                <i className="fa-solid fa-download download-icon"></i>
-                            </a>
+                                <hr />
+                                
+                                <a href={MyCV} download className="download-link">DOWNLOAD 
+                                    <i className="fa-solid fa-download download-icon"></i>
+                                </a>
+
+                                <hr />
                             </div>
                             
                             <div className="col-12 col-lg-8">
