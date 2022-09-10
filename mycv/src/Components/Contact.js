@@ -58,9 +58,11 @@ class Contact extends Component {
             return capcha;
         }
         
-        const temp = getCaptcha();
+        let temp = getCaptcha();
         const onClick = (e) => {
-            document.querySelector(".captcha-content").innerHTML = getCaptcha();
+            const temp1 = getCaptcha();
+            document.querySelector(".captcha-content").innerHTML = temp1;
+            temp=temp1;
         } 
 
         const disable = () => {
@@ -69,6 +71,8 @@ class Contact extends Component {
             $(".input-captcha").val("");
             $(".button-check-icon").css("display", "none");
             $(".button-contact").css("display", "none");
+        // const temp = getCaptcha();
+
         }
 
         const checkInput = (e) => {
@@ -82,13 +86,14 @@ class Contact extends Component {
                 $(".status-text").css("display", "block");
                 $(".status-text").css("color", "green");
                 $(".button-contact").css("display", "block");
+                setTimeout(disable, 5000);
 
             }else{
                 $(".status-text").text("Captcha not matched. Please try again!");  
                 $(".status-text").css("display", "block");
                 $(".status-text").css("color", "red");
+                setTimeout(disable, 1000);
             }
-            setInterval(disable, 5000);
         }
         
         return(
