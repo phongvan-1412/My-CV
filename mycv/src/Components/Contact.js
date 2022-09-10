@@ -1,5 +1,6 @@
 import React, { Component, useRef } from 'react';
 import emailjs from 'emailjs-com';
+import $ from 'jquery';
 
 import MyCV from "../data/MyCV.pdf";
 
@@ -29,6 +30,7 @@ class Contact extends Component {
         ]
     }
     render(){
+        // Send Email 
         const sendEmail = (e) => {
             e.preventDefault();
         
@@ -40,6 +42,55 @@ class Contact extends Component {
               });
               e.target.reset();
           };
+
+        // Captcha 
+        let allCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N',
+                             'O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b',
+                             'c','d','e','f','g','h','i','j','k','l','m','n','o','p',
+                             'q','r','s','t','u','v','w','x','y','z',0,1,2,3,4,5,6,7,8,9];
+                    
+        function getCaptcha(){
+            let capcha = "";
+            for(let i = 0; i < 6; i++){
+                let randomChar = allCharacters[Math.floor(Math.random() * allCharacters.length)];
+                capcha+= ` ${randomChar}`;
+            }
+            return capcha;
+        }
+        
+        const temp = getCaptcha();
+        const onClick = (e) => {
+            document.querySelector(".captcha-content").innerHTML = getCaptcha();
+        } 
+
+        const disable = () => {
+            $(".status-text").text("");
+            onClick();
+            $(".input-captcha").val("");
+            $(".button-check-icon").css("display", "none");
+            $(".button-contact").css("display", "none");
+        }
+
+        const checkInput = (e) => {
+            document.querySelector(".button-check-icon").style.display = "block";
+        }
+
+        const checkCaptcha = (e) => {
+            e.preventDefault();
+            if(temp.replace(/ /g, "") === $(".input-captcha").val()){
+                $(".status-text").text("Nice!"); 
+                $(".status-text").css("display", "block");
+                $(".status-text").css("color", "green");
+                $(".button-contact").css("display", "block");
+
+            }else{
+                $(".status-text").text("Captcha not matched. Please try again!");  
+                $(".status-text").css("display", "block");
+                $(".status-text").css("color", "red");
+            }
+            setInterval(disable, 5000);
+        }
+        
         return(
             <div className="container-fluid contact-wrapper" 
                  data-aos="fade-up"
@@ -117,6 +168,28 @@ class Contact extends Component {
                                             </div>
                                         </div>
                                         
+                                        <div className="col-12 col-md-6">
+                                            <div className="form-group captcha-wrapper">
+                                                <div className="captcha-img-wrapper">
+                                                    <img style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "../img/captcha.jpg"})`}}/>
+                                                    <span className="captcha-content" value={temp}>{temp}</span>
+                                                </div>
+                                                <button className="button-reload-icon fa-solid fa-rotate-right" name="button-reload" onClick={onClick}></button>
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div className="col-12 col-md-6">
+                                            <div className="form-group captcha-check-wrapper">
+                                                <input className="input-captcha" type="text" placeholder="Enter Captcha" maxLength="6"  onChange={checkInput} required/>
+                                                <button className="button-check-icon" onClick={checkCaptcha}>Check</button>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-12">
+                                            <span className="status-text"></span>
+                                        </div>
+
                                         <div className="col-12">
                                             <button type="submit" className="button-contact">
                                                 <span className="button-contact-text">Send Message</span>
