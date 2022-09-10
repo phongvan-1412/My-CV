@@ -66,30 +66,34 @@ class About extends Component{
         ],
         skills: [
             {
-                skill_percent: "65",
+                skill_percent: "85",
                 skills_name: "HTML"    
             },
             {
-                skill_percent: "55",
+                skill_percent: "80",
                 skills_name: "CSS" 
             },
             {
-                skill_percent: "50",
+                skill_percent: "65",
                 skills_name: "JAVASCRIPT" 
             }
             ,
             {
-                skill_percent: "55",
+                skill_percent: "70",
                 skills_name: "REACT" 
             },
             {
-                skill_percent: "50",
+                skill_percent: "65",
                 skills_name: "SQL SERVER" 
             },
             {
-                skill_percent: "40",
+                skill_percent: "60",
                 skills_name: "LARAVEL" 
-            } 
+            },
+            {
+                skill_percent: "65",
+                skills_name: "GIT" 
+            }
         ],
         resumes: [
             {
