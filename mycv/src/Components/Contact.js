@@ -19,7 +19,7 @@ class Contact extends Component {
             },
             {
                 contacts_icon: "fa fa-envelope-open",
-                contacts_title: "Mail Me",
+                contacts_title: "Email Me",
                 contacts_content: "bichvanphamnguyen1412@gmail.com"
             },
             {
@@ -43,6 +43,15 @@ class Contact extends Component {
               e.target.reset();
           };
 
+        const thankTxt = () => {
+            if($("#inputName").val() != "" && $("#inputEmail").val() != "" && $("#inputText" != "").val() && $("#inputSubject").val() != ""){
+                $("#thank-txt").text("Thank you for contact me. Have a great day!");
+                $("#thank-txt").css("color", "green");
+            }else{
+                $("#thank-txt").text("Please fill in required field!");
+                $("#thank-txt").css("color", "red");
+            }
+        }
         // Captcha 
         let allCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N',
                              'O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b',
@@ -59,20 +68,19 @@ class Contact extends Component {
         }
         
         let temp = getCaptcha();
-        const onClick = (e) => {
+        const onClick = () => {
             const temp1 = getCaptcha();
             document.querySelector(".captcha-content").innerHTML = temp1;
             temp=temp1;
         } 
 
         const disable = () => {
-            $(".status-text").text("");
+            $("#status-text").text("");
             onClick();
             $(".input-captcha").val("");
             $(".button-check-icon").css("display", "none");
             $(".button-contact").css("display", "none");
-        // const temp = getCaptcha();
-
+            $("#thank-txt").text("");
         }
 
         const checkInput = (e) => {
@@ -82,16 +90,16 @@ class Contact extends Component {
         const checkCaptcha = (e) => {
             e.preventDefault();
             if(temp.replace(/ /g, "") === $(".input-captcha").val()){
-                $(".status-text").text("Nice!"); 
-                $(".status-text").css("display", "block");
-                $(".status-text").css("color", "green");
+                $("#status-text").text("Nice! It seems like you're not a robot"); 
+                $("#status-text").css("display", "block");
+                $("#status-text").css("color", "green");
                 $(".button-contact").css("display", "block");
-                setTimeout(disable, 5000);
+                setTimeout(disable, 10000);
 
             }else{
-                $(".status-text").text("Captcha not matched. Please try again!");  
-                $(".status-text").css("display", "block");
-                $(".status-text").css("color", "red");
+                $("#status-text").text("Captcha not matched. Please try again!");  
+                $("#status-text").css("display", "block");
+                $("#status-text").css("color", "red");
                 setTimeout(disable, 1000);
             }
         }
@@ -139,6 +147,7 @@ class Contact extends Component {
                                         <div className="col-12 col-md-6">
                                             <div className="form-group">
                                                 <input type="text" 
+                                                       id="inputName"
                                                        name="name"
                                                        placeholder="YOUR NAME"
                                                        required/>
@@ -148,6 +157,7 @@ class Contact extends Component {
                                         <div className="col-12 col-md-6">
                                             <div className="form-group">
                                                 <input type="email" 
+                                                       id="inputEmail"
                                                        name="email"
                                                        placeholder="YOUR EMAIL"
                                                        required/>
@@ -157,15 +167,17 @@ class Contact extends Component {
                                         <div className="col-12 col-md-12">
                                             <div className="form-group">
                                                 <input type="text" 
-                                                    name="subject"
-                                                    placeholder="YOUR SUBJECT"
-                                                    required/>
+                                                       id="inputSubject"
+                                                       name="subject"
+                                                       placeholder="YOUR SUBJECT"
+                                                       required/>
                                             </div>
                                         </div>
 
                                         <div className="col-12">
                                             <div className="form-group">
                                                 <textarea
+                                                    id="inputText"
                                                     name="message"
                                                     placeholder="YOUR MESSAGE"
                                                     required>
@@ -192,14 +204,18 @@ class Contact extends Component {
                                         </div>
 
                                         <div className="col-12">
-                                            <span className="status-text"></span>
+                                            <span id="status-text"></span>
                                         </div>
 
                                         <div className="col-12">
-                                            <button type="submit" className="button-contact">
+                                            <button type="submit" className="button-contact" onClick={thankTxt}>
                                                 <span className="button-contact-text">Send Message</span>
                                                 <span className="button-contact-icon fa fa-send"></span>
                                             </button>
+                                        </div>
+
+                                        <div className="col-12" style={{marginTop: "25px"}}>
+                                            <span id="thank-txt"></span>
                                         </div>
                                     </div>
                                 </form>

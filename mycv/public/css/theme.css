@@ -517,6 +517,7 @@ header ul li:hover a span{
     background: var(--borderColor);
     color: var(--fontColor);
     transition: .3s;
+    cursor: none !important;
 }
 .contact-form textarea {
     width: 100%;
@@ -529,6 +530,7 @@ header ul li:hover a span{
     color: var(--fontColor);
     overflow: hidden;
     transition: .3s;
+    cursor: none !important;
 }
 .captcha-wrapper{
     display: flex;
@@ -634,12 +636,9 @@ header ul li:hover a span{
     background-color: var(--backgroundColor5);
     color: var(--fontColor);
 }
-.button-contact:hover,
-.button-contact:focus{
+.button-contact:hover{
     background-image: linear-gradient(90deg, var(--linkColor),var(--backgroundColor5));
 }
-
-
 
 /* ----------PORTFOLIO---------- */
 .portfolio-wrapper{
