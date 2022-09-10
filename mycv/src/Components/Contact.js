@@ -30,28 +30,6 @@ class Contact extends Component {
         ]
     }
     render(){
-        // Send Email 
-        const sendEmail = (e) => {
-            e.preventDefault();
-        
-            emailjs.sendForm('phongvan_1412', 'template_2qfy44l', e.target, 'e-1E9vepB3la1PGys')
-              .then((result) => {
-                  console.log(result.text);
-              }, (error) => {
-                  console.log(error.text);
-              });
-              e.target.reset();
-          };
-
-        const thankTxt = () => {
-            if($("#inputName").val() != "" && $("#inputEmail").val() != "" && $("#inputText" != "").val() && $("#inputSubject").val() != ""){
-                $("#thank-txt").text("Thank you for contact me. Have a great day!");
-                $("#thank-txt").css("color", "green");
-            }else{
-                $("#thank-txt").text("Please fill in required field!");
-                $("#thank-txt").css("color", "red");
-            }
-        }
         // Captcha 
         let allCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N',
                              'O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b',
@@ -103,7 +81,29 @@ class Contact extends Component {
                 setTimeout(disable, 1000);
             }
         }
+
+        // Send Email 
+        const sendEmail = (e) => {
+            e.preventDefault();
         
+            emailjs.sendForm('phongvan_1412', 'template_2qfy44l', e.target, 'e-1E9vepB3la1PGys')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
+                e.target.reset();
+            };
+
+        const thankTxt = () => {
+            if($("#inputName").val() != "" && $("#inputEmail").val() != "" && $("#inputText").val()  != "" && $("#inputSubject").val() != ""){
+                $("#thank-txt").text("Thank you for contact me. Have a great day!");
+                $("#thank-txt").css("color", "green");
+            }else{
+                $("#thank-txt").text("Please fill in required field!");
+                $("#thank-txt").css("color", "red");
+            }
+        }
         return(
             <div className="container-fluid contact-wrapper" 
                  data-aos="fade-up"
