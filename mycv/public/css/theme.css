@@ -834,7 +834,40 @@ header ul li:hover a span{
         right: 15%;
     }
     .contact-wrapper{
-        height: 200vh;
+        height: 250vh;
     }
-
+    .captcha-img-wrapper{
+        width: 300px !important;
+    }
+    .captcha-content{
+        font-size: 25px !important;
+        letter-spacing: 10px;
+    }
+    .button-reload-icon{
+        font-size: 15px !important;
+    }
+}
+@media screen and (max-width: 400px){
+    .captcha-img-wrapper{
+        width: 250px !important;
+    }
+    .captcha-content{
+        font-size: 20px !important;
+        letter-spacing: 7px;
+    }
+    .button-reload-icon{
+        font-size: 15px !important;
+    }
+}
+@media screen and (max-width: 350px){
+    .captcha-img-wrapper{
+        width: 180px !important;
+    }
+    .captcha-content{
+        font-size: 13px !important;
+        letter-spacing: 5px;
+    }
+    .button-reload-icon{
+        font-size: 13px !important;
+    }
 }
