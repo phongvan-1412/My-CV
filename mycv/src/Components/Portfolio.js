@@ -22,7 +22,7 @@ const Portfolio = () => {
             project_position_title: "Position",
             project_position_value: "Full Stack",
             project_work_title: "Works",
-            project_work_value: "Product: Display + Relevant Functional",
+            project_work_value: "What I do in Project: Design Layout for User side (using React + Bootstrap, CSS) + Products (Display Products and Relevant Functions: Search Products, Bidding Products, Comments of Customers - using Laravel API to get data)",
             project_source_title: "Source Code",
             project_source_value: "https://github.com/phongvan-1412/VNHP-Online-Auction",
             project_description_title: "Description",

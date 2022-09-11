@@ -718,8 +718,8 @@ header ul li:hover a span{
     font-size: 33px;
     font-weight: 700;
 }
-.portfolio-detail-title{
-    padding-left: 50px;
+.portfolio-detail-value{
+    font-size: 13px;
 }
 /* ----------RESPONSIVE---------- */
 @media screen and (max-width: 1024px){
