@@ -797,6 +797,14 @@ header ul li:hover a span{
     .portfolio-title-bg{
         font-size: 60px;
     }
+    .about-list,
+    .portfolio-detail-list{
+        display: block;
+}
+    .about-list li,
+    .portfolio-detail-list li{
+        width: 100%;
+}
 }
 @media screen and (max-width: 560px){
     .button::before, .button{
@@ -859,6 +867,14 @@ header ul li:hover a span{
         font-size: 15px !important;
     }
 }
+@media screen and (max-width: 375px){
+    .contact-title-section h1{
+        font-size: 30px;
+    }
+    .contact-title-bg{
+        font-size: 40px;
+    }
+}
 @media screen and (max-width: 350px){
     .captcha-img-wrapper{
         width: 180px !important;
@@ -869,5 +885,18 @@ header ul li:hover a span{
     }
     .button-reload-icon{
         font-size: 13px !important;
+    }
+    .about-list-value{
+        font-size: 13px;
+    }
+    .about-title-bg,
+    .portfolio-title-bg{
+        font-size: 50px;
+    }
+    .contact-custom-span i{
+        font-size: 25px;
+    }
+    .contact-custom-span{
+        font-size: 12px;
     }
 }

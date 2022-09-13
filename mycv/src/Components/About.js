@@ -183,7 +183,7 @@ class About extends Component{
                                     <div className="row">
                                         {this.state.stats.map((stat, index) => {
                                             return(
-                                            <div className="col-6" key={index}>
+                                            <div className="col-md-6 col-xl-6 col-12 mt-sm-5 mt-5" key={index}>
                                                 <div className="about-box-stats with-margin">
                                                     <h3 className="position-relative poppins-font">{stat.stats_number}</h3>
                                                     <p className="position-relative text-uppercase m-0">{stat.stats_content}
